@@ -13,9 +13,9 @@ colors = {
     "best": "#00A9A0",
     "pirata12": "#939494",
     "pirata4": "#D9F407",
-    "North":  "#FF7982",
-    "East": "#B6001E", 
-    "West": "#00b4d8"
+    "North": "#FF7982",
+    "East": "#B6001E",
+    "West": "#00b4d8",
 }
 
 
@@ -46,12 +46,14 @@ itcz = np.array([[-34.0, 6], [-20, 6], [-20, 11], [-34.0, 11]])
 
 percusion_E = np.array([[-34.0, 12.5], [-20.0, 12.5], [-20.0, 4.5], [-34.0, 4.5]])
 
+
 def load_colormap_from_txt(file_path):
     from matplotlib.colors import ListedColormap
+
     rgb_values = np.loadtxt(file_path)
     return ListedColormap(rgb_values)
 
 
 # Example usage
-colormap_file = 'chase-spectral-rgb.txt'  # Replace with your .txt file path
+colormap_file = "chase-spectral-rgb.txt"  # Replace with your .txt file path
 radar_cmap = load_colormap_from_txt(colormap_file)
