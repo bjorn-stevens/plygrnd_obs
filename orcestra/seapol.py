@@ -65,6 +65,7 @@ axs[0].set_yticklabels(
 )
 axs[0].spines["left"].set_color(colors["West"])
 axs[0].spines["bottom"].set_color(colors["West"])
+axs[0].tick_params(color=colors["West"])
 
 seapol_east = axs[1].pcolormesh(
     map2.longitude[ix, iy],
@@ -110,6 +111,7 @@ axs[1].add_patch(
 sns.despine(offset=10)
 axs[1].spines["left"].set_color(colors["East"])
 axs[1].spines["bottom"].set_color(colors["East"])
+axs[1].tick_params(color=colors["East"])
 
 # cax = inset_axes(axs[0], width="3%", height="40%", loc='upper right')
 
